@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glory IX Police </title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#2b0f1f; /* PINK GELAP */
+  color:#fff;
+}
+
+/* HEADER */
+.header{
+  text-align:center;
+  padding:25px 10px;
+}
+
+h1{
+  margin:0;
+  font-size:22px;
+  color:#ff6fb1;
+}
+
+.subtitle{
+  font-size:13px;
+  color:#ffb6d9;
+}
+
+/* CONTAINER */
+.container{
+  width:95%;
+  max-width:520px;
+  margin:0 auto 140px;
+}
+
+/* SECTION */
+.section{
+  background:#3a1326;
+  border-radius:12px;
+  margin-bottom:12px;
+  overflow:hidden;
+}
+
+.section-header{
+  padding:12px;
+  font-weight:bold;
+  background:#ff6fb1;
+  cursor:pointer;
+  color:#2b0f1f;
+}
+
+.section-content{
+  display:none;
+}
+
+.item{
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+  border-top:1px solid #ff94c6;
+  font-size:13px;
+}
+
+.item span{
+  color:#ffd6e9;
+  font-size:12px;
+}
+
+/* TOTAL */
+.total{
+  background:#3a1326;
+  padding:15px;
+  border-radius:12px;
+  margin-top:20px;
+  text-align:center;
+}
+
+.total div{
+  margin-bottom:8px;
+}
+
+/* BUTTON */
+button{
+  border:none;
+  border-radius:10px;
+  padding:10px;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.reset{
+  background:#ff2f75;
+  color:white;
+  width:100%;
+  margin-top:15px;
+}
+
+.copy-btn{
+  background:#ff9acb;
+  color:#2b0f1f;
+  margin:5px 3px;
+}
+
+/* TOAST NOTIF */
+.toast{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#ff6fb1;
+  color:#2b0f1f;
+  padding:10px 18px;
+  border-radius:20px;
+  font-size:13px;
+  opacity:0;
+  pointer-events:none;
+  transition:all .3s ease;
+}
+
+.toast.show{
+  opacity:1;
+  bottom:35px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Glory IX ROLEPLAY</h1>
+  <div class="subtitle">POLICE DOJ</div>
+</div>
+
+<div class="container">
+<!-- PASAL A -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">Pasal [ 1 ] – Lalu Lintas</div>
+  <div class="section-content">
+    <div class="item">
+      <label><input type="checkbox" data-denda="1300" data-penjara="0" data-impound="1"> A01 – Tidak mempunyai sim</label>
+      <span> $1.300 |  0 bulan |  1 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="1500" data-penjara="0" data-impound="3"> A02 – Berkendara Ugal-ugalan</label>
+      <span> $1.500 |  0 bulan |  2 hari</span>
+    </div>
+   <div class="item">
+      <label><input type="checkbox" data-denda="0" data-penjara="0" data-impound="1"> A03 – Parkir sembarangan</label>
+      <span> $0 |  0 bulan |  2 hari</span>
+    </div>
+   <div class="item">
+      <label><input type="checkbox" data-denda="2700" data-penjara="0" data-impound="1"> A04 – Kendaraan tanpa plate</label>
+      <span> $1.700 |  0 bulan |  2 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2000" data-penjara="0" data-impound="2"> A05 – Kabur dari kecelakaan</label>
+      <span> $2.000 |  0 bulan |  2 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="3500" data-penjara="5" data-impound="2"> A06 – Tabrak lari hingga menimbulkan korban jiwa</label>
+      <span> $3.500 | 5 bulan |  2 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="1300" data-penjara="0" data-impound="1"> A07 – Melawan arus jalan</label>
+      <span> $1.300 |  0 bulan |  1 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2000" data-penjara="0" data-impound="1"> A08 – Membawa penumpang lebih dari kapasitas</label>
+      <span> $2.000 |  0 bulan |  1 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2700" data-penjara="0" data-impound="2"> A09 – Menghindari pemberhentian petugas</label>
+      <span> $2.700 |  0 bulan |  2 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="1500" data-penjara="0" data-impound="2"> A010 – Memodifikasi ilegal (nitro dan knalpot api)</label>
+      <span> $1.500 |  0 bulan |  2 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="3000" data-penjara="5" data-impound="2"> A011 – Balap liar</label>
+      <span> $3000 |  5 bulan |  2 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2000" data-penjara="0" data-impound="2"> A012 – Menerobos barikade police</label>
+      <span> $2.000 |  0 bulan |  2 hari</span>
+    </div>
+  </div>
+</div>
+
+<!-- PASAL B -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">Pasal [2] – Tindak Pidana Umum</div>
+  <div class="section-content">
+    <div class="item">
+      <label><input type="checkbox" data-denda="2500" data-penjara="5" data-impound="0"> B01 – Kekerasan Ringan</label>
+      <span>$2.500 | 5 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2000" data-penjara="5" data-impound="0"> B02 – Meludah Sembarangan</label>
+      <span>$2.000 | 3 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2000" data-penjara="3" data-impound="0"> B03 – Buang air kecil/besar sembarangan</label>
+      <span>$2.000 | 3 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2500" data-penjara="5" data-impound="6"> B04 – mengggangu/menipu petugas saat bertugas </label>
+      <span>$2.500 | 6 bulan | 2 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2500" data-penjara="5" data-impound="0"> B05 – Menyebarkan ujaran buruk individu/kelompol</label>
+      <span>$2.500 | 5 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="3500" data-penjara="10" data-impound="0"> B06 – Berkelahi di tempat umum  </label>
+      <span>$3.500 | 8 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2800" data-penjara="8" data-impound="2"> B07 – Mengganggu ketertiban umum</label>
+      <span>$2.800 | 8 bulan | 2 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="3800" data-penjara="12" data-impound="2"> B08 – Pencurian</label>
+      <span>$3.800 | 12 bulan | 1 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="3400" data-penjara="13" data-impound="2"> B09 – Vandalisme</label>
+      <span>$3.400 | 13 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2800" data-penjara="7" data-impound="2"> B010 – Menggunakan atribut instansi secara ilegal </label>
+      <span>$2.800 | 7 bulan | 2 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="3800" data-penjara="10" data-impound="1"> B011 – Menyamar Sebagai Petugas Instansi Untuk Keuntungan Pribadi</label>
+      <span>$3.800 | 10 bulan | 1 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2800" data-penjara="8" data-impound="0"> B012 – Mencoba Melakukan suap Terhadap Petugas</label>
+      <span>$2.800 | 8 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2800" data-penjara="7" data-impound="0"> B013 – Memberikan Informasi Palsu Kepads petugas</label>
+      <span>$2.800 | 7 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="3000" data-penjara="10" data-impound="0"> B014 – Mempunyai Hewan Yang Dilindungi (hiu dan penyu)</label>
+      <span>$3.000 | 10 bulan | 1 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="3000" data-penjara="10" data-impound="0"> B015 – Memperjualbelikan  Hewan Yang Dilindungi</label>
+      <span>$3.000 | 10 bulan | 1 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="3500" data-penjara="13" data-impound="0"> B016 – Mengumpulkan Massa Untuk Menciptakan Kericuhan</label>
+      <span>$3.500 | 13 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="3800" data-penjara="10" data-impound="0"> B017 – Ikut Dalam Kericuhan Yang Menyebabkan Kerugian</label>
+      <span>$3.800 | 10 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2500" data-penjara="8" data-impound="0"> B018 – Menolak Membubarkan Diri</label>
+      <span>$2.500 | 8 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="3800" data-penjara="15" data-impound="0"> B019 – Melakukan Penghakiman Secara Sepihak</label>
+      <span>$3.800 | 15 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2500" data-penjara="5" data-impound="0"> B020 – Melakukan Aktivitas Perburuan tanpa Licensi Senjata </label>
+      <span>$3.000 | 10 bulan | 0 hari</span>
+    </div>
+  </div>
+</div>
+
+<!-- PASAL C -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">Pasal [3] – Narkotika</div>
+  <div class="section-content">
+    <div class="item">
+      <label><input type="checkbox" data-denda="4000" data-penjara="13" data-impound="0"> C01 – Berada Di tempat Narkotika</label>
+      <span>$4.000 | 13 bulan | 2 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="4200" data-penjara="10" data-impound="0"> C02 – Terlibat Dalam Pembuatan Narkotika</label>
+      <span>$4.200 | 10 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="5000" data-penjara="12" data-impound="0"> C03 – Menjual atau Mendistribusikan Narkotika</label>
+      <span>$5.000 | 10 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2000" data-penjara="11" data-impound="1"> C04-1 – Membawa Kanabis (1-10)</label>
+      <span>$2000 | 11 bulan | 1 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="4000" data-penjara="12" data-impound="1"> C04-2 – Membawa Kanabis (11-25)</label>
+      <span>$4000 | 12 bulan | 1 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="6000" data-penjara="13" data-impound="1"> C04-3 – Membawa narkoba (>25)</label>
+      <span>$6000 | 13 bulan | 1 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="2000" data-penjara="10" data-impound="1"> C05-1 – Membawa Joint (1-10)</label>
+      <span>$2000 | 10 bulan | 1 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="4000" data-penjara="11" data-impound="1"> C05-2 – Membawa Joint (11-25)</label>
+      <span>$4000 | 11 bulan | 1 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="6000" data-penjara="12" data-impound="1"> C05-3 – Membawa Joint (>25)</label>
+      <span>$6000 | 12 bulan | 1 hari</span>
+    </div>
+  </div>
+</div>
+
+<!-- PASAL D -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">Pasal [4] – Senjata Api</div>
+  <div class="section-content">
+    <div class="item">
+      <label><input type="checkbox" data-denda="8000" data-penjara="15" data-impound="0"> D01 – Menyalahgunakan Senjata tajam/tumpul</label>
+      <span>$8000 | 15 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="12000" data-penjara="20" data-impound="0"> D02-1 – Kepemilikan Senjata api Ilegal (First)  </label>
+      <span>$12.000 | 18 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="9000" data-penjara="23" data-impound="0"> D02-2 – Kepemilikan Senjata api Ilegal (Second)  </label>
+      <span>$13.500 | 20 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="18000" data-penjara="25" data-impound="0"> D02-3 – Kepemilikan Senjata api Ilegal (Third)  </label>
+      <span>$16.000 | 23 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="11000" data-penjara="10" data-impound="0"> D03 – Kepemilikan Kevlar</label>
+      <span>$11.000 | 10 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="11000" data-penjara="10" data-impound="0"> D04 – Kepemilikan Uranium</label>
+      <span>$11.000 | 10 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="14000" data-penjara="16" data-impound="0"> D05 – Menjual/membeli Senjata Api Ilegal</label>
+      <span>$14.000 | 16 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="20000" data-penjara="20" data-impound="0"> D06 – Penembakan Senjata ke suatu Individu/Kelompok</label>
+      <span>$20.000 | 20 bulan | 0 hari</span>
+    </div>
+    <div class="item">
+      <label><input type="checkbox" data-denda="16000" data-penjara="15" data-impound="0"> D07 – Penyelundupan Senjata Api</label>
+      <span>$16.000 | 15 bulan | 0 hari</span>
+    </div>
+  </div>
+</div>
+
+<!-- PASAL E -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">Pasal [5] – Kejahatan & Terorisme</div>
+  <div class="section-content">
+    <div class="item">
+      <label><input type="checkbox" data-denda="19000" data-penjara="20" data-impound="2"> E01 – Pembegalan</label>
+      <span>$18.300 | 18 bulan | 2 hari</span>
+    </div>
+      <div class="item">
+      <label><input type="checkbox" data-denda="20000" data-penjara="25" data-impound="2"> E02 – Perampokan Warung</label>
+      <span>$20.000 | 23 bulan | 2 hari</span>
+    </div>
+      <div class="item">
+      <label><input type="checkbox" data-denda="20000" data-penjara="23" data-impound="1"> E03 – Pencurian mobil (car stealing)</label>
+      <span>$20.000 | 23 bulan | 1 hari</span>
+    </div>
+      <div class="item">
+      <label><input type="checkbox" data-denda="22000" data-penjara="25" data-impound="0"> E04 – Penyerangan kepada Instansi yang sedang bertugas </label>
+      <span>$22.000 | 25 bulan | 0 hari</span>
+    </div>
+     <div class="item">
+      <label><input type="checkbox" data-denda="26000" data-penjara="25" data-impound="0"> E05 – Melakukan Penyanderaan terhadap warga/Instansi</label>
+      <span>$26.000 | 25 bulan | 0 hari</span>
+    </div>
+     <div class="item">
+      <label><input type="checkbox" data-denda="23000" data-penjara="22" data-impound="0"> E06 – Peperangan Bersenjata antar Kelompok</label>
+      <span>$23.000 | 22 bulan | 0 hari</span>
+    </div>
+    <div class="section-header berat">
+      <label="checkbox" data-denda="0"data-penjara="0"data-impound="0"> E07 – TERORISME</label>
+      <span> = persidangan atau hukuman mati</span>
+    </div>
+    <div class="section-header berat">
+      <label="checkbox" data-denda="0"data-penjara="0"data-impound="0"> E08 – PENYANDERAAN MASSA</label>
+      <span> = persidangan atau hukuman mati</span>
+    </div>
+  </div>
+</div>
+
+<button class="reset" onclick="resetAll()">Reset</button>
+
+<div class="total">
+  <div>Total Denda: $<span id="denda">0</span></div>
+  <div>Total Penjara: <span id="penjara">0</span> bulan</div>
+  <div>Total Impound: <span id="impound">0</span> hari</div>
+
+  <div class="copy-area">
+    <button class="copy-btn" onclick="copyText('denda')">Copy Denda</button>
+    <button class="copy-btn" onclick="copyText('penjara')">Copy Penjara</button>
+    <button class="copy-btn" onclick="copyText('impound')">Copy Impound</button>
+  </div>
+</div>
+
+<div id="toast" class="toast">Berhasil di-copy</div>
+
+<script>
+const checks = document.querySelectorAll("input[type=checkbox]");
+const toast = document.getElementById("toast");
+
+checks.forEach(c => c.addEventListener("change", calc));
+
+function calc(){
+  let d=0,p=0,i=0;
+  checks.forEach(c=>{
+    if(c.checked){
+      d+=+c.dataset.denda;
+      p+=+c.dataset.penjara;
+      i+=+c.dataset.impound;
+    }
+  });
+  denda.innerText=d;
+  penjara.innerText=p;
+  impound.innerText=i;
+}
+
+function resetAll(){
+  checks.forEach(c=>c.checked=false);
+  calc();
+}
+
+function toggle(el){
+  const content = el.nextElementSibling;
+  content.style.display = content.style.display==="block"?"none":"block";
+}
+
+<script>
+function copyText(id){
+  const text = document.getElementById(id).innerText;
+
+  // Jika browser support clipboard (HTTPS)
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text)
+      .then(() => showToast("Berhasil di-copy: " + text))
+      .catch(() => fallbackCopy(text));
+  } else {
+    // Fallback untuk localhost / file html
+    fallbackCopy(text);
+  }
+}
+
+function fallbackCopy(text){
+  const temp = document.createElement("textarea");
+  temp.value = text;
+  document.body.appendChild(temp);
+  temp.select();
+  document.execCommand("copy");
+  document.body.removeChild(temp);
+
+  showToast("Berhasil di-copy: " + text);
+}
+
+function showToast(msg){
+  const toast = document.getElementById("toast");
+  toast.innerText = msg;
+  toast.classList.add("show");
+
+  setTimeout(()=>{
+    toast.classList.remove("show");
+  },2000);
+}
+</script>
+
+</body>
+</html>
